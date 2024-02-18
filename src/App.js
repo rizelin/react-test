@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from 'react'; 
 
 function App() {
+  console.log('lender')
+  const [number, setNumber] = useState(1)
+  const dobule = () => {
+    setNumber((prevState) => prevState * 2 ); 
+    setNumber((prevState) => prevState * 2 ); 
+  };
+
+  // const pringHello = () => {
+  //   console.log('Hello')
+  // }
+  // 색션2-10
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <React.StrictMode>
+    <div>
+      {number} 
     </div>
-  );
+    <button className="btn btn-primary" onClick={dobule}>submit</button>
+    </React.StrictMode>
+  )
 }
 
 export default App;
